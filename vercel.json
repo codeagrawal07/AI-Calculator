@@ -1,15 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "ai-calculetor/app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/process-image",
-      "dest": "/ai-calculetor/app.py"
-    }
-  ]
+    "version": 2,
+    "builds": [
+        { "src": "app.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+        { "src": "/process-image", "dest": "app.py" },
+        { "src": "/style.css", "dest": "style.css" },
+        { "src": "/script.js", "dest": "script.js" },
+        { "src": "/", "dest": "index.html" }
+    ]
 }
