@@ -149,7 +149,8 @@ analyzeBtn.addEventListener('click', async () => {
 
     try {
         // Send the image data to your Python server using the fetch API
-              const response = await fetch('http://127.0.0.1:5000/process-image', {
+             // NEW
+            const response = await fetch('/process-image',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             // **CHANGE**: Add the prompt text to the request body
@@ -173,4 +174,5 @@ analyzeBtn.addEventListener('click', async () => {
         console.error('Error:', error);
         writeToOutputPanel('Failed to analyze. Check console for details.');
     }
+
 });
