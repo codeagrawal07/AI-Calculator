@@ -1,0 +1,5 @@
+Flask
+flask-cors
+Pillow
+langchain-google-genai
+python-dotenv
