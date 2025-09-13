@@ -6,9 +6,9 @@ import LLM as llm
 import base64
 import io
 
-api= Flask(__name__)
-CORS(api)
-@api.route('/process-image', methods=['POST'])
+app= Flask(__name__)
+CORS(app)
+@app.route('/process-image', methods=['POST'])
 def handle_image():
     """
     This is the server endpoint that receives the image from JavaScript.
@@ -37,3 +37,4 @@ def handle_image():
     
     # Send the description back to the frontend in JSON format
     return jsonify({'description': description})
+
